@@ -6,6 +6,10 @@ RUN apt-get update
 RUN apt-get install --force-yes -y spm-client
 RUN apt-get autoremove && apt-get autoclean
 ADD ./run.sh run.sh
+ADD ./netmap.sh /opt/spm/bin/netmap.sh
 RUN chmod +x run.sh
+RUN chmod +x /opt/spm/bin/netmap.sh
+RUN chmod +x /opt/spm/bin/spm-client-setup-conf.sh
+ENV PATH ${PATH}:/opt/spm/bin/
 VOLUME /opt/spm
 CMD ["/run.sh"]
