@@ -10,6 +10,7 @@ ADD ./netmap.sh /opt/spm/bin/netmap.sh
 RUN chmod +x run.sh
 RUN chmod +x /opt/spm/bin/netmap.sh
 RUN chmod +x /opt/spm/bin/spm-client-setup-conf.sh
+RUN ln /usr/bin/env /bin/env
 ENV PATH ${PATH}:/opt/spm/bin/
 VOLUME /opt/spm
 CMD ["/run.sh"]
