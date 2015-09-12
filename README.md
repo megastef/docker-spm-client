@@ -1,6 +1,6 @@
 # SPM Client 
 
-This image contains [SPM](https://www.sematext.com/spm) Client in a Docker Container. 
+This Docker Image contains [SPM](https://www.sematext.com/spm) Client. 
 
 SPM Client is an application monitoring agent for the following Applications: 
 - [Solr & SolrCloud](http://sematext.com/spm/integrations/solr-monitoring.html), 
@@ -15,7 +15,8 @@ SPM Client is an application monitoring agent for the following Applications:
 - Redis, Memcached
 - MySQL & MariaDB
 - AWS EC2, ELB, EBS, RDS
-- Java/Scala Applicatiosn (JVM)
+- JVM / Java Applications
+- ...
 
 Please note there are separate monitoring agents available for other technologies not covered by SPM Client: 
 - [Docker](http://sematext.com/spm/integrations/docker-monitoring.html) 
