@@ -45,11 +45,11 @@ docker run -d --name “ES1” -d --volumes-from spm-client -e ES_JAVA_OPTS="-Dc
 Parameters:
 - SPM_CFG - Multiple App configurations for spm-client-setup-conf.sh separated by ";". 
 
-An alternative way to configure SPM Client, applicable for scenarios not coverd in the simplified SPM_CFG variable: 
-Configure SPM Client as described in Sematext documentation using the setup scripts, called via "docker exec -it spm-client your_linux_command":
+
+Any Linux command can be executed to modify the configuration using "docker exec -it spm-client your_linux_command" :
 ```
-# configure Elasticsearch give jvmname 'ES1'
-docker exec -it spm-client /bin/bash /opt/bin/spm-setup-conf.sh YOUR_SPM_TOKEN es javagent jvmname:ES1
+# An alternative way to configure Elasticsearch to set  e.g. jvmname 'ES1'
+docker exec -it spm-client /bin/bash /opt/spm/bin/spm-setup-conf.sh YOUR_SPM_TOKEN es javagent jvmname:ES1
 # persist config changes
 docker commit spm-client
 ```
