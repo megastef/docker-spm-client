@@ -6,8 +6,9 @@ IFS=";"
 if [ -n "$SPM_CFG" ]; then
 	for cfg in $SPM_CFG
 	do
+	  IFS = $IFS_ORIGINAL	
 	  echo "-" "$cfg"  
-	  bash /opt/spm/bin/spm-client-setup-conf.sh $cfg
+	  bash -c "/opt/spm/bin/spm-client-setup-conf.sh $cfg"
 	  # Check for standalone monitors
 	  case "$cfg" in
 	    *standalone* ) export SPM_STANDALONE="enabled"; echo "Standalone Monitor enabled for: $cfg";;
