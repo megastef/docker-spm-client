@@ -10,6 +10,6 @@ if [[ -n "$1" && -n "$2" ]] ; then
 	cat /opt/spm/spm-monitor/conf/spm-monitor-network-config-${SPM_TOKEN}-default.properties
 else
 	echo "usage: netmap TOKEN interface"
-	echo "e.g. netmap XXXXXXX all"
-	echo "e.g. netmap XXXXXXX \"eth0, eth1\""
+	echo "e.g. netmap.sh XXXXXXX all"
+	echo "e.g. netmap.sh XXXXXXX \"eth0, eth1\""
 fi
