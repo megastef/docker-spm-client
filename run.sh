@@ -2,6 +2,7 @@
 # Configure SPM 
 #Set the field separator to new line
 IFS_ORIGINAL=$IFS
+SPM_STANDALONE_MONITOR="disabled"
 IFS=";"
 if [ -n "$SPM_CFG" ]; then
 	for cfg in $SPM_CFG
